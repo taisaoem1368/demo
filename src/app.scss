@@ -1,0 +1,214 @@
+$select-background: #c0392b;
+$select-width: 220px;
+$select-height: 40px;
+$green: #4CAF50;
+$red: #F44336;
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+#content {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 1.6em;
+}
+
+* {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+a:link {
+    color:#000;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#000;
+}
+
+a:hover {
+    color:#33F;
+}
+
+.center {
+    padding: 10px;
+    text-align: center;
+}
+
+.final {
+    color: black;
+    padding-right: 3px;
+}
+
+.interim {
+    color: gray;
+}
+
+.info {
+    font-size: 14px;
+    text-align: center;
+    color: #777;
+    display: none;
+}
+
+.right {
+    float: right;
+}
+.sidebyside {
+    display: inline-block;
+    width: 45%;
+    min-height: 40px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#info {
+    font-size: 16px;
+    text-align: left;
+    color: #777;
+    width: 100%;
+    p {
+        margin: 0;
+        padding: 0 0 12px;
+    }
+
+    #info_start {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_speak_now {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_no_speech {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_no_microphone {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_allow {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_denied {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_blocked {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+    #info_upgrade {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+}
+
+#results, #translate-results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+    position: relative;
+    p {
+        margin: 4px 0;
+    }
+}
+#start_button {
+    border: 1px solid $green;
+    background-color: transparent;
+    padding: 6px 12px;
+    cursor: pointer;
+    span {
+        font-size: 1.2em;
+        font-weight: 400;
+        color: $green;
+    }
+    &.listening {
+        border-color: $red;
+        span {
+            color: $red;
+        }
+    }
+}
+
+#div_language {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .language {
+        text-align: right;
+    }
+
+    &.translate {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+}
+
+// Select box style
+select {
+    background: #fff url("http://punkchip.com/images/select-arrows.png") no-repeat 100% 50%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0.5em 0.75em;
+    -webkit-appearance: button;
+    width: 200px;
+    height: 36px;
+}
+
+/* remove arrows from Firefox */
+@-moz-document url-prefix() {
+    .select-wrap {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        display: inline-block;
+        position: relative;
+        &:before {
+            content: " ";
+            background: transparent url("http://punkchip.com/images/select-arrows.png") no-repeat 50% 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 20px;
+            height: 15px;
+            margin-top: -8px;
+            display: inline-block;
+            pointer-events: none;
+        }
+
+        select {
+            -moz-appearance: treeitem;
+        }
+    }
+}
+
+/* remove arrows from IE10 */
+select::-ms-expand {
+    display: none;
+}

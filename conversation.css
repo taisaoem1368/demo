@@ -1,0 +1,235 @@
+.ari-content-body {
+    display: flex;
+    
+}
+.ari-content-body .conversation-user {
+    flex: 20%;
+}
+.ari-content-body .box-chat-user {
+    flex: 50%;
+    border-right: 1px solid #E4E8F3;
+    border-left: 1px solid #E4E8F3;
+}
+.ari-content-body .input-user-chat {
+    height: 72px;
+    box-sizing: border-box;
+    padding: 24px;
+    border-top: 1px solid rgb(221, 226, 239);
+    border-color: rgb(221, 226, 239);
+}
+.box-chat-user .box-chat {
+    height: calc(100vh - 146px);
+    overflow-y: scroll;
+    padding: 0px 30px;
+}
+
+.box-chat-user-training {
+    flex: 30%;
+    background: #fff;
+}
+.input-user-chat input {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
+    line-height: 1;
+    width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    resize: none;
+    display: inline-block;
+    cursor: text;
+    border-width: 0px;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: transparent;
+    border-radius: 0.3em;
+    outline: none;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #AAAFB9;
+    opacity: 1; /* Firefox */
+}
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #AAAFB9;
+}
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #AAAFB9;
+}
+
+.input-user-chat {
+    display: flex;
+}
+.input-user-chat form {
+    flex: 80%;
+}
+.input-user-chat .icon-input-chat {
+    padding: 0px 10px;
+    color: #AAAFB9;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.input-user-chat .icon-input-chat:hover {
+    color: #000;
+}
+/*Chatbot*/
+.box-chat .action-show {
+    height: 24px;
+    width: 100%;
+    /* box-sizing: border-box; */
+    padding-left: 24px;
+    padding-right: 24x;
+}
+.box-chat .action-show .action-text {
+    color: rgb(170, 175, 185);
+    font-size: 12px;
+}
+
+.box-chat .user_input {
+    height: auto;
+    width: 100%;
+    margin: 5px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user_input .data-text {
+    padding: 10px;
+    display: inline-block;
+    background: #574AE2;
+    border-radius: 15px 0px 15px 15px;
+    order: 1;
+    width: 45%;
+}
+.user_input .data-text span{
+    color: #fff;
+}
+
+.eFLsxb {
+    order: 2;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(135, 229, 226);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.action-ari-sv {
+    float: left;
+}
+
+.intent-value-input {
+    float: right;
+}
+.box-chat .bot-say {
+    height: auto;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bot-say .data-text {
+    padding: 10px;
+    display: inline-block;
+    background: #ECEFF7;
+    border-radius: 0px 15px 15px 15px;
+    order: 2;
+    width: 45%;
+}
+.bot-say .data-text span{
+    color: #000;
+}
+.eFLsxb-bot {
+    order: 1;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(135, 229, 226);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.conversation-user {
+    overflow-y: scroll;
+    height: 570px;
+}
+.conversation-user::-webkit-scrollbar {
+    width: 0px;
+}
+.conversation-user .sender-item {
+    cursor: pointer;
+    display: flex;
+    padding: 20px 0px;
+    border-bottom: 1px solid #ECEFF7;
+}
+.conversation-user .sender-item .avt-sender {
+    margin: 0px 15px;
+    background-image: url('./Tram-Anh4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* transform: scale(2); */
+}
+
+.sender-itemt-active {
+    background: #F5F5FB;
+}
+
+.conversation-user .sender-item .info-sender h4 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.conversation-user .sender-item .info-sender span {
+    color: rgb(170, 175, 185);
+}
+
+/*box-chat-user-training*/
+.bAbqHG {
+    box-sizing: border-box;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(135, 229, 226);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 50%;
+}
+
+/*end-box-chat-user-training*/

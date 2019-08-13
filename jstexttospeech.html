@@ -1,0 +1,36 @@
+<!-- Bismillah YBM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>JS methods</title>
+</head>
+<body>
+  <div id="langList"></div>
+<script type="text/javascript">
+var utterance = new window.SpeechSynthesisUtterance();
+utterance.lang = 'ja-JP'; //translates on the fly - soooo awesome (japanese is the funniest)
+utterance.volume = 1.0;
+utterance.rate = 1.0;
+utterance.pitch = 1.0;
+utterance.text = "Facebook news feeds are full of garbage";
+
+//Speak the phrase
+window.speechSynthesis.speak(utterance);
+
+window.speechSynthesis.onvoiceschanged = function () {
+  var speechSynthesisVoices = speechSynthesis.getVoices();
+  var accents = _(speechSynthesisVoices).pluck('lang');
+  var voices = _(speechSynthesisVoices).pluck('voiceURI');
+  var names = _(speechSynthesisVoices).pluck('name');
+  console.log('names', names);
+  console.log('accents', _.uniq(accents));
+  console.log('voices', voices);
+};
+</script>
+
+</body>
+</html>

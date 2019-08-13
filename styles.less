@@ -1,0 +1,107 @@
+
+// Color variables (appears count calculates by raw css)
+@color0: #787878; // Appears 2 times
+
+
+
+* {
+	-webkit-font-smoothing: antialiased;
+	font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.ari_menu_container {
+	background: rgb(44, 57, 81);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	top: 0;
+	transition: 150ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	width: 64px;
+	&:hover {
+		width: 248px;
+	}
+}
+.name-item-menu {
+	opacity: 0;
+}
+.item-activate {
+	a {
+		background-color: rgb(38, 49, 70) !important;
+		color: rgb(255, 255, 255) !important;
+	}
+}
+.ic-menu-box {
+	margin: 0px 15px;
+}
+.ari_bot_menu {
+	list-style-type: none;
+	margin: 0;
+	padding-top: 50px;
+	padding: 0;
+	transition: all .5s;
+}
+.menu_item {
+	a {
+		color: rgb(151, 159, 180);
+		display: block;
+		height: 56px;
+		overflow: hidden;
+		padding: 12px;
+		text-decoration: none;
+		transition: all .1s;
+		&:hover {
+			background-color: rgb(38, 49, 70);
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+	}
+}
+.sub-menu {
+	border-left: 1px solid @color0;
+	list-style: none;
+	margin-left: 40px;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: relative;
+	&: {
+		before {
+			border-bottom: 1px solid @color0;
+			bottom: -10px;
+			content: '';
+			left: -10%;
+			position: absolute;
+			right: 15px;
+		}
+	}
+	.sub-menu-item {
+		a {
+			color: rgb(151, 159, 180);
+			display: block;
+			overflow: hidden;
+			padding: 12px;
+			text-decoration: none;
+			transition: all .1s;
+			&:hover {
+				background-color: rgb(38, 49, 70);
+				color: rgb(255, 255, 255);
+				text-decoration: none;
+			}
+		}
+	}
+}
+@keyframes {
+	showNameMenu {
+		80% { opacity: 0;
+	}
+	showSubMenu {
+		80% { opacity: 0;
+	}
+	hideNameMenu {
+		0% { opacity: 0;
+	}
+}
+100% {
+	opacity: 0;
+	opacity: 1;
+	opacity: 1;
+}

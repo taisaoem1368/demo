@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		button {
+			padding: 15px 40px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 15px;
+			transition: all .5s ease;
+			border: none;
+			width: 100%;
+			cursor: pointer;
+		}
+		textarea {
+			width: 100%;
+			height: 100px;
+			border: 1px solid green;
+		}
+		#textarea-chatbot {
+			width: 100%;
+			height: 100px;
+			border: 1px solid green;
+		}
+		select {
+			padding: 15px 25px;
+		}
+/*		.form-group {
+			margin-bottom: 20px !important; 
+			font-weight: bold;
+		}*/
+
+		#hienrachotao {
+			text-align: center;
+			color: pink;
+			margin-top: 10px;
+		}
+/*		.height_cus {
+			padding: 0;
+			margin: 0;
+		}*/
+		.off-marg-s {
+			margin: 0;
+			padding: 0;
+		}
+		#btn-listing {
+			width: 100%;
+		 
+		}
+		.answer-bt {
+			margin-top: 50px;
+			padding: 20px 0px;
+			border-top: 1px solid red;
+			border-bottom: 1px solid red;
+			
+		}
+		.demo-chatbox {
+			margin-top: 10px;
+			height: 300px;
+			border: 1px solid #787878;
+		}
+
+		#bot-send {
+			text-align: left;
+		}
+
+		#bot-send img {
+			border-radius: 50%;
+			width: 45px;
+			height: 45px;
+		}
+
+		#user-send {
+			text-align: right;
+		}
+		.msg-box {
+			padding: 0px 30px;
+		}
+		.demo-chatbox {
+			overflow: scroll;
+
+		}
+		.msg-box p {
+			font-weight: 500;
+		}
+		.bg-danger {
+			border: none;
+		}
+		.border-slibar {
+			border-left: 1px solid #787878;
+		}
+		#title-demo {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="title-demo">Công Ty ARI</h1>
+	<div class="container">
+			<div class="row">
+				<div class="col-8">
+					<div class="demo-chatbox">
+						<div class="msg-box">
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+							<p id="bot-send"><img src="./nao-robot.jpg"> Tôi có thể giúp gì cho bạn?</p>
+							<p id="user-send">Tôi có thể giúp gì cho bạn?</p>
+						</div>
+					</div>
+					<form id="form-robot-en">
+							<input type="hidden" name="control" value="speak"><br>
+							<input type="hidden" name="param_1" value="en"><br>
+							<div class="form-group">
+								<label for="param_2"><b>Chat with the robot:</b></label>
+								<textarea id="textarea-chatbot"></textarea>
+							</div>
+							<div class="row">
+								<div class="col-2">
+								<span id="btn-listing" class="btn btn-primary"><i class="fa fa-microphone" aria-hidden="true"></i></span>
+								</div>
+								<div class="col-10">
+									<button type="submit" class="btn btn-primary">Gửi cho Chatbot</button>
+								</div>
+							</div>
+							
+					</form>
+
+
+				</div>
+				<div class="col-4 border-slibar">
+					<div class="row">
+						<div class='col-6'>
+							<form id="form-robot-up" class="height_cus">
+								<input type="hidden" name="control" value="motion"><br>
+								<input type="hidden" name="param_1" value="wake"><br>
+								<input type="hidden" name="param_2" value="up"><br>
+								<button type="submit" class="btn btn-primary">Đứng Lên</button>
+							</form>
+						</div>
+
+						<div class='col-6'>
+							<form id="form-robot-down" class="height_cus">
+								<input type="hidden" name="control" value="motion"><br>
+								<input type="hidden" name="param_1" value="wake"><br>
+								<input type="hidden" name="param_2" value="down"><br>
+								<button type="submit" class="btn btn-primary bg-danger" >Ngồi Xuống</button>
+							</form>
+						</div>
+					</div>
+
+						<div class="row">
+
+						<div class='col-6'>
+							<form id="form-camera-turnoff" class="height_cus">
+								<input type="hidden" name="control" value="gstream"><br>
+								<input type="hidden" name="param_1" value="start"><br>
+								<input type="hidden" name="param_2" value="640,480,15,0"><br>
+								<button type="submit" class="btn btn-primary">Bật Camera</button>
+							</form>
+						</div>
+													<div class='col-6'>
+							<form id="form-camera-turnon" class="height_cus">
+								<input type="hidden" name="control" value="gstream"><br>
+								<input type="hidden" name="param_1" value="stop"><br>
+								<input type="hidden" name="param_2" value="action"><br>
+								<button type="submit" class="btn btn-primary bg-danger">Tắt Camera</button>
+							</form>
+						</div>
+
+						</div>
+
+						<div class="row">
+													<div class='col-6'>
+							<form id="form-robot-onmic" class="height_cus">
+								<input type="hidden" name="control" value="micro"><br>
+								<input type="hidden" name="param_1" value="start"><br>
+								<input type="hidden" name="param_2" value="action"><br>
+								<button type="submit" class="btn btn-primary">Mở Mic</button>
+							</form>
+						</div>
+
+						<div class='col-6'>
+							<form id="form-robot-offmic"  class="height_cus">
+								<input type="hidden" name="control" value="micro"><br>
+								<input type="hidden" name="param_1" value="stop"><br>
+								<input type="hidden" name="param_2" value="action"><br>
+								<button type="submit" class="btn btn-primary bg-danger">Tắt Mic</button>
+							</form>
+						</div>
+						</div>
+
+						<div class="row">
+							<div class='col-6'>
+							<form id="form-robot-onsound" class="height_cus">
+								<input type="hidden" name="control" value="sound"><br>
+								<input type="hidden" name="param_1" value="start"><br>
+								<input type="hidden" name="param_2" value="action"><br>
+								<button type="submit" class="btn btn-primary">Mở TD Âm Thanh</button>
+							</form>
+						</div>
+						<div class='col-6'>
+							<form id="form-robot-offsound" class="height_cus">
+								<input type="hidden" name="control" value="sound"><br>
+								<input type="hidden" name="param_1" value="stop"><br>
+								<input type="hidden" name="param_2" value="action"><br>
+								<button type="submit" class="btn btn-primary bg-danger">Tắt TD Âm Than</button>
+							</form>
+						</div>
+						</div>
+						<div class="row">
+					<div class='col-6'>
+							<form id="form-robot-greet" class="height_cus">
+								<input type="hidden" name="control" value="speak"><br>
+								<input type="hidden" name="param_1" value="vi"><br>
+								<input type="hidden" name="param_2" value="event/welcome.mp3"><br>
+								<button type="submit" class="btn btn-primary">Chào khách</button>
+							</form>
+						</div>
+											<div class='col-6'>
+							<form id="form-robot-stop" class="height_cus">
+								<input type="hidden" name="control" value="motion"><br>
+								<input type="hidden" name="param_1" value="stopall"><br>
+								<input type="hidden" name="param_2" value="action"><br>
+								<button type="submit" class="btn btn-primary" style="">Dừng Tất Cả</button>
+							</form>
+						</div>
+						</div>
+
+				</div>
+			</div>
+	</div>
+	
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="https://code.responsivevoice.org/responsivevoice.js?key=t47TZpZA"></script>
+<textarea id="text" cols="45" rows="3">Hello world</textarea>
+ 
+<select id="voiceselection"></select> 
+ 
+<input 
+  onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" 
+  type="button" 
+  value="Play" 
+/>
+ 
+<script>
+        //Populate voice selection dropdown
+        var voicelist = responsiveVoice.getVoices();
+        var vselect = $("#voiceselection");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+</script>
+</body>
+
+</html>
